@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Matrix Calculator"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Matrix 1 Dimensions -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Matrix 1 Dimensions:"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etRows1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Rows"
+                android:inputType="number"
+                android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="×"
+                android:textSize="20sp"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/etCols1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Columns"
+                android:inputType="number"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <!-- Matrix 1 Elements -->
+        <EditText
+            android:id="@+id/etMatrix1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter matrix elements separated by spaces"
+            android:gravity="top"
+            android:minLines="3"
+            android:inputType="textMultiLine" />
+
+        <!-- Matrix 2 Dimensions -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Matrix 2 Dimensions:"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etRows2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Rows"
+                android:inputType="number"
+                android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="×"
+                android:textSize="20sp"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/etCols2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Columns"
+                android:inputType="number"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <!-- Matrix 2 Elements -->
+        <EditText
+            android:id="@+id/etMatrix2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter matrix elements separated by spaces"
+            android:gravity="top"
+            android:minLines="3"
+            android:inputType="textMultiLine" />
+
+        <!-- Operation Selection -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Operation:"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/rgOperation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbSubtract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subtract" />
+
+            <RadioButton
+                android:id="@+id/rbMultiply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Multiply" />
+
+            <RadioButton
+                android:id="@+id/rbDivide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Divide" />
+        </RadioGroup>
+
+        <!-- Calculate Button -->
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:layout_marginTop="16dp" />
+
+        <!-- Result Display -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Result:"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="monospace"
+            android:minLines="5" />
+
+    </LinearLayout>
+</ScrollView>
